@@ -22,6 +22,29 @@
             display: inline-block;
             width: 120px; /* Adjust width as needed */
         }
+        .back-button {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        .booking-id {
+            font-weight: bold;
+            color: #007bff; /* Example color */
+            margin-bottom: 20px;
+            display: block;
+        }
+        .rickroll-image {
+            margin-top: 30px;
+            width: 200px; /* Adjust size as needed */
+            height: auto;
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -30,6 +53,13 @@
 
         <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            // Display the Rickroll image
+            echo "<img src='Rickrolling_QR_code.png' alt='Rickroll QR Code' class='rickroll-image'>";
+            // Generate Booking ID
+            $bookingDate = date("Ymd"); // Get current date in YYYYMMDD format
+            $randomNumber = rand(1, 999); // Generate a random 3-digit number
+            $bookingID = "#SPA" . $bookingDate . "-" . sprintf("%03d", $randomNumber); // Format the booking ID
+            echo "<span class='booking-id'>Booking ID: " . $bookingID . "</span>";
             echo "<ul>";
 
             // Display Service
@@ -83,6 +113,9 @@
         } else {
             echo "<p>No booking data received.</p>";
         }
+
+        //add back button
+        echo "<a href='page1.php' class='back-button'>Back to Booking</a>";
         ?>
     </div>
 </body>

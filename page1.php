@@ -34,6 +34,7 @@
             padding: 10px 20px;
             border: none;
             cursor: pointer;
+            border-radius: 5px;
         }
         /* Add a style for required fields (optional) */
         .required-field::after {
@@ -120,6 +121,7 @@
             </div>
             <div>
                 <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
             </div>
         </form>
     </div>
