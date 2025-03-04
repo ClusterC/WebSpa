@@ -6,14 +6,31 @@
     <style>
         body {
             font-family: sans-serif;
+            /* Add background image styles here */
+            background-image: url('Spa_Background.jpg'); /* Path to your image */
+            background-size: cover; /* Cover the entire viewport */
+            background-repeat: no-repeat; /* Prevent image repetition */
+            background-attachment: fixed; /* Keep image fixed while scrolling */ /* Optional: for parallax effect, remove this */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
         }
         .container {
-            width: 80%;
-            margin: 0 auto;
+            width: 20%;
+            background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background for better text readability */
+            padding: 20px; /* Add padding to the container */
+            border-radius: 10px; /* Add rounded corners to the container */
+            display: flex; /* Make container a flex container */
+            flex-direction: column; /* Align items vertically */
+            align-items: center; /* Center items horizontally */
+            min-height: 300px; /* Minimum height to ensure centering works */
+
         }
         ul {
             list-style-type: none;
-            padding: 0;
+            padding: 0;        
         }
         li {
             margin-bottom: 10px;
@@ -21,6 +38,8 @@
         strong {
             display: inline-block;
             width: 120px; /* Adjust width as needed */
+            text-align: left; /* Align strong text to the left */
+            margin-right: 5px; /* Add some spacing */
         }
         .back-button {
             display: inline-block;
@@ -44,6 +63,7 @@
             width: 200px; /* Adjust size as needed */
             height: auto;
             display: block;
+            margin: 20px auto; /* Center image horizontally */
         }
     </style>
 </head>

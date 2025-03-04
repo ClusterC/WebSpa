@@ -6,10 +6,25 @@
     <style>
         body {
             font-family: sans-serif;
+            /* Add background image styles here */
+            background-image: url('Spa_Background.jpg'); /* Path to your image */
+            background-size: cover; /* Cover the entire viewport */
+            background-repeat: no-repeat; /* Prevent image repetition */
+            background-attachment: fixed; /* Keep image fixed while scrolling */ /* Optional: for parallax effect, remove this */
+            display: flex; /* Use flexbox to center the container */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            min-height: 100vh; /* Ensure the body takes up the full viewport height */
+            margin: 0; /* Remove default body margins */
+
         }
         .container {
-            width: 80%;
-            margin: 0 auto;
+            width: 50%;
+            background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background for better text readability */
+            padding: 20px; /* Add padding to the container */
+            border-radius: 10px; /* Add rounded corners to the container */
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2) /* Add a subtle shadow for depth*/
+
         }
         label {
             display: block;
@@ -60,6 +75,21 @@
         .date-time-group input[type="date"],
         .date-time-group input[type="time"]{
             width: auto;
+        }
+        textarea {
+            /* ... (Existing styles) ... */
+            resize: vertical; /* Allow only vertical resizing */
+            min-height: 80px; /* Set a minimum height */
+            max-height: 160px; /* Set a maximum height to avoid overly large textareas */
+        }
+
+        textarea:invalid { /* Style when the maxlength is exceeded */
+            border-color: red;
+            box-shadow: 0 0 5px red;
+        }
+
+        textarea[maxlength]:focus:invalid{
+            outline: none; /* Removes the focus ring on invalid input */
         }
     </style>
 </head>
@@ -117,7 +147,7 @@
             <div>
                 <label for="message">Message:</label>
                 <textarea id="message" name="message"
-                    placeholder="Enter your message"></textarea>
+                          placeholder="Enter your message" maxlength="255"></textarea>
             </div>
             <div>
                 <button type="submit">Submit</button>
