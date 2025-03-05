@@ -75,9 +75,12 @@
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Display the Rickroll image
             echo "<img src='Rickrolling_QR_code.png' alt='Rickroll QR Code' class='rickroll-image'>";
+            function randomNumber($base) {
+                return rand(1, pow(10, $base)-1);
+            }
             // Generate Booking ID
             $bookingDate = date("Ymd"); // Get current date in YYYYMMDD format
-            $randomNumber = rand(1, 999); // Generate a random 3-digit number
+            $randomNumber = randomNumber(3); // Generate a random 3-digit number
             $bookingID = "#SPA" . $bookingDate . "-" . sprintf("%03d", $randomNumber); // Format the booking ID
             echo "<span class='booking-id'>Booking ID: " . $bookingID . "</span>";
             echo "<ul>";
