@@ -96,7 +96,7 @@
 <body>
     <div class="container">
         <h1>Booking Form</h1>
-        <form action="page2.php" method="post">
+        <form action="6630611006_02.php" method="post">
             <div>
                 <label for="service" class="required-field">Select Service:</label>
                 <select id="service" name="service" required> 

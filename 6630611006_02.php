@@ -138,7 +138,7 @@
         }
 
         //add back button
-        echo "<a href='page1.php' class='back-button'>Back to Booking</a>";
+        echo "<a href='6630611006_01.php' class='back-button'>Back to Booking</a>";
         ?>
     </div>
 </body>
